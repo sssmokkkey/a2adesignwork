@@ -1,5 +1,6 @@
 .full {
 	background: url('../img/bg-img2.jpg') no-repeat top center fixed; 
+	background-color: #fcfcfc;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -9,86 +10,37 @@
 	.full {
 		background-size: 1247px 771px !important;
 		background: url('../img/bg-img2.jpg') no-repeat top left fixed; 
+		background-color: #fcfcfc;
 	}
 }
 .main-content-col {
-	padding: 20px;
+	padding-top: 20px;
+	margin-top: 50px;
 	background-color: white;
 }
+.main-content-col h3 {
+	font-weight: normal;
+	padding-bottom: 10px;
+	color: #00468C;
+} 
 
 .booking-col {
 	position: relative;
 	height: 243px !important;
 	top: 0 !important;
-	margin-top: 68px !important;
+	margin-top: 15px !important;
 }
-.buttons-col {
+/*
+.testimonials-col {
 	position: relative;
 	bottom: 0;
 	margin-top: 30px;
 	margin-bottom: 10px;
 }
+*/
 .content-bottom {
 	margin-top: 0 !important;
 }
-.footer-gray-col {
-	padding-right: 0;
-	padding-left: 0;
-}
-.gray-container div div div .nav-pills > li {
-	float: none;
-}
-.gray-container div div div {
-	border-right: 1px solid #FCFCFC;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-.gray-container div div div+div+div+div+div {
-	border-right: 1px solid transparent;
-}
-.gray-container div div div h4 {
-	text-align: center;
-	color: #444444;
-	padding-top: 30px;
-}
-.gray-container div div div ul {
-	padding-bottom: 35px;
-}
-.gray-container div div div ul li a {
-	text-align: center;
-	color: #444444;
-	padding: 2px;
-}
-.footer-container ul li a:hover,
-.gray-container div div div ul li a:hover {
+.light-backg-footer {
 	background-color: transparent;
-	text-decoration: underline
-}
-.footer-dark-gray-col {
-	padding-top: 17px;
-	padding-bottom: 17px;
-	background-color: #B2B0B6 !important;
-}
-.footer-container ul li {
-	margin: 0;
-	border-right: 1px solid white;
-	-webkit-transform: skewX(-20deg);
-	-moz-transform: skewX(-20deg);
-	-ms-transform: skewX(-20deg);
-	-o-transform: skewX(-20deg);
-	transform: skewX(-20deg);
-}
-.footer-container ul li a {
-	text-align: center;
-	white-space: nowrap;
-	padding: 0 5px;
-	color: white;
-}
-.footer-container ul li a span {
-	display: block;
-	-webkit-transform: skewX(20deg);
-	-moz-transform: skewX(20deg);
-	-ms-transform: skewX(20deg);
-	-o-transform: skewX(20deg);
-	transform: skewX(20deg);
 }
