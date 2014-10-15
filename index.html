@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html class="full" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Alps2Alps</title>
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet/less" href="bootstrap/datepicker/less/datepicker.less" media="all" />
+        <link rel="stylesheet/less" href="bootstrap/datepicker/less/datepicker3.less" media="all" />
+        <link href="bootstrap/datepicker/css/datepicker.css" rel="stylesheet">
+        <link href="bootstrap/datepicker/css/datepicker3.css" rel="stylesheet">
+        <link href="bootstrap/select/css/bootstrap-select.css" rel="stylesheet">
+        <link href="css/default-style.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic' rel='stylesheet' type='text/css'>
+	</head>
+   
+	<body>
+
+<!-- NAVBAR -->
+        <nav class="navbar navbar-top" role="navigation">
+            <div class="navbar-color-container"></div>
+            <div class="container-fluid">
+                <div class="navbar-container">
+                    <ul class="nav nav-pills navbar-left">
+                        <li id="icon-li"><a href="#"><span class="car"></span></a></li>
+                        <li id="icon-li"><a href="#"><span class="minibus"></span></a></li>
+                        <li id="icon-li"><a href="#"><span class="bus"></span></a></li>
+                        <li id="navbar-li"><a href="#"><span>TRANSFER<br>DESTINATIONS</span></a></li>
+                        <li id="navbar-li"><a href="#"><span>AIRPORTS</span></a></li>
+                        <li id="navbar-li"><a href="#"><span>TRAIN<br>STATIONS</span></a></li>
+                        <li id="navbar-li"><a href="#"><span>WHY<br>Alps2Alps</span></a></li>
+                        <li id="navbar-li"><a href="#"><span>ABOUT<br>US</span></a></li>
+                        <li id="navbar-li"><a href="#"><span>CONTACTS</span></a></li>
+                    </ul>
+                    <ul class="nav nav-pills navbar-right">
+                        <li id="login-li">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                LOG IN
+                            </a>
+                            <div class="dropdown-menu login-container" role="menu">
+                                <input type="" class="form-control" id="inputUsername" placeholder="Username">
+                                <input type="" class="form-control" id="inputPassword" placeholder="Password">
+                                <button type="button" class="btn btn-login">LOG IN</button>
+                            </div>
+                        </li>
+                        <li id="flag-li"><a href="#"><span class="flag-rus"></span></a></li>
+                        <li id="flag-li"><a href="#"><span class="flag-eng"></span></a></li>
+                        <li>
+                            <button type="button" class="btn btn-navbar-season">SUMMER&nbsp;<span class="button-arrow"></span></button>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-container -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+<!-- CONTENT -->
+        
+        
+        <div class="container front-page-container">
+
+            <div class="jumbotron">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td id="figure-brand">
+                                <figure><a class="navbar-brand" href="#"><img src="img/logo.png" /></a></figure>
+                            </td>
+                            <td id="slogan">
+                                <h3><i>RELIABLE &amp; AFFORDABLE</i></h3>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-xs-12 booking-col">
+                <div class="row title-row">
+                    <div class="col-xs-12">
+                        <h4>GET YOUR QUOTE &amp; BOOK ONLINE</h4>
+                    </div>
+                </div>
+                <div class="row content-row">
+
+                    <div class="col-xs-4 first-booking-col">
+                        <div class="form-group">
+                            <label for="inputFrom">Your Pick-Up Location</label>
+                            <select class="selectpicker show-tick form-control">
+                                <option disabled selected style='display:none;'>Select Airport or Train Station</option>
+                                <option>Milano Central Station</option>
+                                <option>Milano Malpensa Airport</option>
+                                <option>Orio al Serio Airport</option>
+                                <option>Nice International Airport</option>
+                                <option>Orio al Serio Airport</option>
+                                <option>Nice International Airport</option>
+                            </select>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <label for="inputTo">Your Drop-Off Destination</label>
+                            <select class="selectpicker show-tick form-control">
+                                <option disabled selected style='display:none;'>Select Resort</option>
+                                <option>Dolomiti Big Resort</option>
+                                <option>Lefay Resort in Gargnano</option>
+                                <option>Chamonix Mont Blanc Resort</option>
+                                <option>Dolomiti Big Resort</option>
+                                <option>Lefay Resort in Gargnano</option>
+                                <option>Chamonix Mont Blanc Resort</option>
+                            </select>
+                        </div>
+                    </div><!-- /.col -->
+                    <div class="col-xs-4 second-booking-col">
+                        <div class="form-group radio-form">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="radio">
+                                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                                <label for="optionsRadios1" ><span class="radio-icon"></span>
+                                                    <small>Single</small>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
+                                                <label for="optionsRadios2" ><span class="radio-icon"></span>
+                                                    <small>Return</small>
+                                                </label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <label class="control-label" for="inputOn">Pick up on / Arrival Date &#38; Time</label>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input class="datepicker form-control datepicker-icon" id="" placeholder="" >
+                                        </td>
+                                        <td>
+                                            <select class="selectpicker show-tick form-control">
+                                                <option>00</option>
+                                                <option>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                                <option>04</option>
+                                                <option>05</option>
+                                                <option>06</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="selectpicker show-tick form-control">
+                                                <option>00</option>
+                                                <option>15</option>
+                                                <option>30</option>
+                                                <option>45</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <label class="control-label" for="inputOn">Your (Return) Filght Date &#38; Time</label>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input class="datepicker form-control datepicker-icon" id="" placeholder="" >
+                                        </td>
+                                        <td>
+                                            <select class="selectpicker show-tick form-control">
+                                                <option>00</option>
+                                                <option>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                                <option>04</option>
+                                                <option>05</option>
+                                                <option>06</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="selectpicker show-tick form-control">
+                                                <option>00</option>
+                                                <option>15</option>
+                                                <option>30</option>
+                                                <option>45</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.form-group -->
+                    </div><!-- /.col -->
+
+                    <div class="col-xs-4 third-booking-col">
+                        <div class="form-group">
+                            <label class="control-label" for="inputPassangers">Passangers</label>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <label for="selectAdults" class="control-label">Adults</label>
+                                        </td>
+                                        <td>
+                                            <select class="selectpicker show-tick form-control" id="selectAdults">
+                                                <option selected>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label for="selectChildren" class="control-label">Children</label>
+                                        </td>
+                                        <td>
+                                            <select class="selectpicker show-tick form-control">
+                                                <option selected>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                                <option>8</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.form-group- -->
+                        <div class="form-group">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group from-form-group">
+                                                <label for="inputPromoCode">Promo code</label>
+                                                <input type="" class="form-control" id="inputPromoCode" placeholder="">
+                                            </div><!-- /.form-group -->
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-important">QUOTE ME NOW&nbsp;<span class="button-arrow"></span></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.form-group- -->
+                    </div><!-- /.col- -->
+
+                </div><!-- /.row- -->
+            </div><!-- /.col- -->
+
+            <div class="col-xs-3 buttons-col">
+                <div class="row">
+                    <button type="button" class="btn btn-help">LIVE HELP&nbsp;<span class="icon-livehelp"></span></button>
+                    <button type="button" class="btn btn-info">READ MORE ABOUT OUR SERVICE</button>
+                </div>
+            </div>
+
+        </div><!-- /.container -->
+   
+        <div class="content-bottom">
+            <div class="footer">
+                <nav class="navbar" role="navigation">
+                    <div class="container-fluid container-bottom-transparency">
+                        <div class="navbar-container">
+                            <ul class="nav nav-pills nav-justified">
+                                <li><a href="#"><span>Geneva airport transfers</span></a></li>
+                                <li><a href="#"><span>Chambery airport transfers</span></a></li>
+                                <li><a href="#"><span>Lyon airport transfers</span></a></li>
+                                <li><a href="#"><span>Grenoble airport transfers</span></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.container-fluid -->
+                    <div class="container-fluid container-bottom">
+                        <div class="navbar-container">
+                            <ul class="nav nav-pills nav-justified">
+                                <li><a href="#"><span>Shared ski transfers</span></a></li>
+                                <li><a href="#"><span>Geneva bus transfers</span></a></li>
+                                <li><a href="#"><span>Train station transfers</span></a></li>
+                                <li><a href="#"><span>Latest Blog Posts</span></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div><!-- /.footer -->
+
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="col-xs-10 col-xs-offset-1 article-col">
+                        <h4>Welcome to Alps2Alps Transfers</h4>
+                        <p>Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+
+                        Lorem ipsum dolor sit amet, emphasis consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+                    </div><!-- /.col -->
+                    <div class="col-xs-12 three-column-col">
+                        <div class="row">
+
+                            <div class="col-xs-4">
+                                <h4>LATEST SUMMER TRANSFER OFFERS</h4>
+                                <div class="blue-box">
+                                    <h4>Get 25 £ gift voucher for any airport transfer in London on transfer booking over 250 €</h4>
+                                </div>
+                                <div class="blue-box">
+                                    <h4>NEW AIRPORTS: Zurich, Munich, Salzburg, Innsbruck</h4>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <h4>READ MORE ABOUT OUR SERVICE</h4>
+                                <ul class="nav nav-pills nav-container">
+                                    <li><a href="#">Testimonials - What our customer have to say</a></li>
+                                    <li><a href="#">How to book your airport transfer with us</a></li>
+                                    <li><a href="#">What makes our transfer service different</a></li>
+                                    <li><a href="#">Get the lowest cost ski transfer</a></li>
+                                    <li><a href="#">How does our ski bus shuttle service work</a></li>
+                                    <li><a href="#">How we calculate our fair prices</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="comments-container">
+                                    <small><p>Joe: We would just like to say thank you for providing us with such a reliable and professional service. Both the drivers were very helpful. The free Wi-Fi was great too! </p>
+                                    <p>Mukesh Parekh: Just a note to say thank you for the excellent service. Pick up from airport and hotel no problems. </p>
+                                    <p>Joe: We would just like to say thank you for providing us with such a reliable and professional service. Both the drivers were very helpful. The free Wi-Fi was great too!</p></small>
+                                </div><!-- /.comments-container -->
+                                <h4>SHARE THIS&nbsp;<span class="twitter"></span><span class="facebook"></span><span class="mail"></span><span class="fax"></span><span class="plus"></span></h4>
+                            </div>
+
+                        </div><!-- /.row -->
+                    </div><!-- /.col -->
+                </div><!-- /.container -->
+            </div><!-- /.container-fluid -->
+
+            <div class="footer">
+                <nav class="navbar" role="navigation">
+                    <div class="container-fluid gray-container">
+                        <div class="navbar-container">
+                            <div class="col-xs-12 gray-col">
+                                <div class="row">
+
+                                    <div class="col-xs-2 col-xs-offset-1">
+                                        <h4>TRAVEL FROM TURINO</h4>
+                                        <ul class="nav nav-pills">
+                                            <li><a href="#">Turin Airport Transfers</a></li>
+                                            <li><a href="#">Shared Transfers Turin</a></li>
+                                            <li><a href="#">Private MiniBus From Turin</a></li>
+                                            <li><a href="#">Shuttle Bus from Turin</a></li>
+                                            <li><a href="#">Turin Airport Info</a></li>
+                                        </ul>
+                                    </div><!-- /.col -->
+                                    <div class="col-xs-2">
+                                        <h4>TRAVEL FROM TURINO</h4>
+                                        <ul class="nav nav-pills">
+                                            <li><a href="#">Turin Airport Transfers</a></li>
+                                            <li><a href="#">Shared Transfers Turin</a></li>
+                                            <li><a href="#">Private MiniBus From Turin</a></li>
+                                            <li><a href="#">Shuttle Bus from Turin</a></li>
+                                            <li><a href="#">Turin Airport Info</a></li>
+                                        </ul>
+                                    </div><!-- /.col -->
+                                    <div class="col-xs-2">
+                                        <h4>TRAVEL FROM TURINO</h4>
+                                        <ul class="nav nav-pills">
+                                            <li><a href="#">Turin Airport Transfers</a></li>
+                                            <li><a href="#">Shared Transfers Turin</a></li>
+                                            <li><a href="#">Private MiniBus From Turin</a></li>
+                                            <li><a href="#">Shuttle Bus from Turin</a></li>
+                                            <li><a href="#">Turin Airport Info</a></li>
+                                        </ul>
+                                    </div><!-- /.col -->
+                                    <div class="col-xs-2">
+                                        <h4>TRAVEL FROM TURINO</h4>
+                                        <ul class="nav nav-pills">
+                                            <li><a href="#">Turin Airport Transfers</a></li>
+                                            <li><a href="#">Shared Transfers Turin</a></li>
+                                            <li><a href="#">Private MiniBus From Turin</a></li>
+                                            <li><a href="#">Shuttle Bus from Turin</a></li>
+                                            <li><a href="#">Turin Airport Info</a></li>
+                                        </ul>
+                                    </div><!-- /.col -->
+                                    <div class="col-xs-2">
+                                        <h4>TRAVEL FROM TURINO</h4>
+                                        <ul class="nav nav-pills">
+                                            <li><a href="#">Turin Airport Transfers</a></li>
+                                            <li><a href="#">Shared Transfers Turin</a></li>
+                                            <li><a href="#">Private MiniBus From Turin</a></li>
+                                            <li><a href="#">Shuttle Bus from Turin</a></li>
+                                            <li><a href="#">Turin Airport Info</a></li>
+                                        </ul>
+                                    </div><!-- /.col -->
+                                </div><!-- /.row -->
+                            </div><!-- /.col -->
+                        </div><!-- /.navbar-container -->
+                    </div><!-- /.container-fluid -->
+                    <div class="container-fluid dark-gray-container">
+                        <div class="navbar-container">
+                        <div class="footer-container">
+                            <div class="col-xs-12">
+                                <ul class="nav nav-pills nav-justified">
+                                    <li><a href="#"><span>Terms &amp; Conditions</span></a></li>
+                                    <li><a href="#"><span>Privacy</span></a></li>
+                                    <li><a href="#"><span>FAQ</span></a></li>
+                                    <li><a href="#"><span>How we work</span></a></li>
+                                    <li><a href="#"><span>Testimonial</span></a></li>
+                                    <li><a href="#"><span>Sitemap</span></a></li>
+                                    <li><a href="#"><span>Why Us</span></a></li>
+                                    <li><a href="#"><span>Log-in</span></a></li>
+                                    <li><a href="#"><span>Blog</span></a></li>
+                                </ul>
+                            </div>
+                            </div><!-- /.footer-container -->
+                        </div><!-- /.navbar-container -->
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div><!-- /.footer -->
+        </div>
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.js"></script>
+        <script src="bootstrap/datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="bootstrap/select/js/bootstrap-select.js"></script>
+        <script src="bootstrap/responsive-tabs/js/responsive-tabs-2.3.2.js"></script>
+        <script src="bootstrap/responsive-tabs/js/responsive-tabs.js"></script>
+        <script src="js/default.js"></script>
+    
+	</body>
+</html>
