@@ -12,6 +12,8 @@
         <link href="bootstrap/datepicker/css/datepicker3.css" rel="stylesheet">
         <link href="bootstrap/select/css/bootstrap-select.css" rel="stylesheet">
         <link href="css/default-style.css" rel="stylesheet">
+        <link href="css/fixed-ad.css" rel="stylesheet">
+        <link href="css/live-help.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700,400italic,500italic,600italic,700italic' rel='stylesheet' type='text/css'>
 	</head>
    
@@ -20,18 +22,17 @@
 <!-- NAVBAR -->
         <nav class="navbar navbar-top" role="navigation">
             <div class="navbar-color-container"></div>
-            <div class="container-fluid">
+            <div class="container-fluid container-top">
                 <div class="navbar-container">
                     <ul class="nav nav-pills navbar-left">
-                        <li id="icon-li"><a href="#"><span class="car"></span></a></li>
-                        <li id="icon-li"><a href="#"><span class="minibus"></span></a></li>
-                        <li id="icon-li"><a href="#"><span class="bus"></span></a></li>
+                        <li id="icon-li"><a href="#"><span class="cars"></span></a></li>
                         <li id="navbar-li"><a href="#"><span>TRANSFER<br>DESTINATIONS</span></a></li>
                         <li id="navbar-li"><a href="#"><span>AIRPORTS</span></a></li>
                         <li id="navbar-li"><a href="#"><span>TRAIN<br>STATIONS</span></a></li>
                         <li id="navbar-li"><a href="#"><span>WHY<br>Alps2Alps</span></a></li>
                         <li id="navbar-li"><a href="#"><span>ABOUT<br>US</span></a></li>
                         <li id="navbar-li"><a href="#"><span>CONTACTS</span></a></li>
+                        <li id="person-li"><a href="#"><span>My Amitours</span></a></li>
                     </ul>
                     <ul class="nav nav-pills navbar-right">
                         <li id="login-li">
@@ -46,17 +47,18 @@
                         </li>
                         <li id="flag-li"><a href="#"><span class="flag-rus"></span></a></li>
                         <li id="flag-li"><a href="#"><span class="flag-eng"></span></a></li>
-                        <li>
-                            <button type="button" class="btn btn-navbar-season">SUMMER&nbsp;<span class="button-arrow"></span></button>
-                        </li>
                     </ul>
                 </div><!-- /.navbar-container -->
             </div><!-- /.container-fluid -->
         </nav>
 
 <!-- CONTENT -->
+
+        <div id="lhc_status_container">
+            <a id="online-icon" class="status-icon" href="#" onclick="return lh_inst.lh_openchatWindow()">Live help is online...</a>
+        </div>
         
-        
+
         <div class="container front-page-container">
 
             <div class="jumbotron">
@@ -67,7 +69,15 @@
                                 <figure><a class="navbar-brand" href="#"><img src="img/logo.png" /></a></figure>
                             </td>
                             <td id="slogan">
-                                <h3><i>RELIABLE &amp; AFFORDABLE</i></h3>
+                                <h3><i>RELIABLE &amp; <br>AFFORDABLE</i></h3>
+                            </td>
+                            <td id="fixed-ad-td">
+                                <div id="fixed-ad">
+                                  <div class="fixed-ad-container">
+                                    <button type="button" class="close" data-dismiss="alert"><span class="icon-close" aria-hidden="true"></span></button>
+                                    <h4><b>Join loyalty program My Amitours</b> for registered users and get <b>every 10th transfer for free!</b></h4>
+                                  </div>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
@@ -134,7 +144,7 @@
                             </table>
                         </div><!-- /.form-group -->
                         <div class="form-group">
-                            <label class="control-label" for="inputOn">Pick up on / Arrival Date &#38; Time</label>
+                            <label class="control-label" for="inputOn">Your Pick-Up / Arrival Date &#38; Time</label>
                             <table>
                                 <tbody>
                                     <tr>
@@ -165,7 +175,7 @@
                             </table>
                         </div><!-- /.form-group -->
                         <div class="form-group">
-                            <label class="control-label" for="inputOn">Your (Return) Filght Date &#38; Time</label>
+                            <label class="control-label" for="inputOn">Your (Return) Flight Date &#38; Time</label>
                             <table>
                                 <tbody>
                                     <tr>
@@ -199,7 +209,7 @@
 
                     <div class="col-xs-4 third-booking-col">
                         <div class="form-group">
-                            <label class="control-label" for="inputPassangers">Passangers</label>
+                            <label class="control-label" for="inputPassangers">Passengers</label>
                             <table>
                                 <tbody>
                                     <tr>
@@ -259,17 +269,28 @@
                 </div><!-- /.row- -->
             </div><!-- /.col- -->
 
-            <div class="col-xs-3 buttons-col">
-                <div class="row">
-                    <button type="button" class="btn btn-help">LIVE HELP&nbsp;<span class="icon-livehelp"></span></button>
-                    <button type="button" class="btn btn-info">READ MORE ABOUT OUR SERVICE</button>
+            <div class="col-xs-3 testimonials-col">
+                <div class="row title-row">
+                    <div class="col-xs-12">
+                        <h4>TESTIMONIALS</h4>
+                    </div>
                 </div>
-            </div>
+                <div class="row content-row">
+                    <div class="col-xs-12">
+                        <div class="comments-container">
+                            <small><p>Joe: We would just like to say thank you for providing us with such a reliable and professional service. Both the drivers were very helpful.</p>
+                            <p>Mukesh Parekh: Just a note to say thank you for the</p></small>
+                        </div><!-- /.comments-container -->
+                    </div>
+                </div>
+            </div><!-- /.col- -->
 
         </div><!-- /.container -->
-   
-        <div class="content-bottom">
-            <div class="footer">
+
+<!-- FOOTER -->
+        
+        <div class="footer transfers-footer-col">
+            <div class="col-xs-12">
                 <nav class="navbar" role="navigation">
                     <div class="container-fluid container-bottom-transparency">
                         <div class="navbar-container">
@@ -279,39 +300,40 @@
                                 <li><a href="#"><span>Lyon airport transfers</span></a></li>
                                 <li><a href="#"><span>Grenoble airport transfers</span></a></li>
                             </ul>
-                        </div>
+                        </div><!-- /.navbar-container -->
                     </div><!-- /.container-fluid -->
                     <div class="container-fluid container-bottom">
                         <div class="navbar-container">
                             <ul class="nav nav-pills nav-justified">
-                                <li><a href="#"><span>Shared ski transfers</span></a></li>
-                                <li><a href="#"><span>Geneva bus transfers</span></a></li>
-                                <li><a href="#"><span>Train station transfers</span></a></li>
-                                <li><a href="#"><span>Latest Blog Posts</span></a></li>
+                                <li id="lowprice-li"><a href="#"><span>Zurich airport transfers <b>New!</b></span></a></li>
+                                <li id="lowprice-li"><a href="#"><span>Munich airport transfers <b>New!</b></span></a></li>
+                                <li id="lowprice-li"><a href="#"><span>Salzburg airport transfers <b>New!</b></span></a></li>
+                                <li id="lowprice-li"><a href="#"><span>Innsbruck airport transfers <b>New!</b></span></a></li>
                             </ul>
-                        </div>
+                        </div><!-- /.navbar-container -->
                     </div><!-- /.container-fluid -->
                 </nav>
-            </div><!-- /.footer -->
+            </div><!-- /.col -->
+        </div><!-- /.footer -->
 
-            <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="col-xs-12 article-container">
                 <div class="container">
                     <div class="col-xs-10 col-xs-offset-1 article-col">
-                        <h4>Welcome to Alps2Alps Transfers</h4>
+                        <h3>Welcome to Alps2Alps Transfers</h3>
                         <p>Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
 
                         Lorem ipsum dolor sit amet, emphasis consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
                     </div><!-- /.col -->
                     <div class="col-xs-12 three-column-col">
                         <div class="row">
-
                             <div class="col-xs-4">
-                                <h4>LATEST SUMMER TRANSFER OFFERS</h4>
+                                <h4>Alps2Alps SPECIAL OFFERS</h4>
                                 <div class="blue-box">
-                                    <h4>Get 25 £ gift voucher for any airport transfer in London on transfer booking over 250 €</h4>
+                                    <h4>NEW AIRPORTS Zurich, Munich, Salzburg, Innsbruck</h4>
                                 </div>
                                 <div class="blue-box">
-                                    <h4>NEW AIRPORTS: Zurich, Munich, Salzburg, Innsbruck</h4>
+                                    <h4>Join MY AMITOURS loyalty program!</h4>
                                 </div>
                             </div>
                             <div class="col-xs-4">
@@ -321,107 +343,133 @@
                                     <li><a href="#">How to book your airport transfer with us</a></li>
                                     <li><a href="#">What makes our transfer service different</a></li>
                                     <li><a href="#">Get the lowest cost ski transfer</a></li>
-                                    <li><a href="#">How does our ski bus shuttle service work</a></li>
+                                    <li><a href="http://www.amitours.com/">Reliable &#38; Affordable Amitours transfers</a></li>
                                     <li><a href="#">How we calculate our fair prices</a></li>
                                 </ul>
                             </div>
                             <div class="col-xs-4">
-                                <div class="comments-container">
-                                    <small><p>Joe: We would just like to say thank you for providing us with such a reliable and professional service. Both the drivers were very helpful. The free Wi-Fi was great too! </p>
-                                    <p>Mukesh Parekh: Just a note to say thank you for the excellent service. Pick up from airport and hotel no problems. </p>
-                                    <p>Joe: We would just like to say thank you for providing us with such a reliable and professional service. Both the drivers were very helpful. The free Wi-Fi was great too!</p></small>
-                                </div><!-- /.comments-container -->
+                                <h4>Alps2Alps HIGHLIGHTS</h4>
+                                <div class="blue-box">
+                                    <h4>List of Resorts</h4>
+                                </div>
+                                <div class="blue-box">
+                                    <h4>Latest Blog Post</h4>
+                                </div>
                                 <h4>SHARE THIS&nbsp;<span class="twitter"></span><span class="facebook"></span><span class="mail"></span><span class="fax"></span><span class="plus"></span></h4>
                             </div>
 
                         </div><!-- /.row -->
                     </div><!-- /.col -->
                 </div><!-- /.container -->
-            </div><!-- /.container-fluid -->
+            </div><!-- /.col -->
 
-            <div class="footer">
-                <nav class="navbar" role="navigation">
-                    <div class="container-fluid gray-container">
-                        <div class="navbar-container">
-                            <div class="col-xs-12 gray-col">
-                                <div class="row">
+            
+            <div class="col-xs-12 light-backg-footer">
+                <div class="container">
+                    <nav class="navbar" role="navigation">
+                        <div class="gray-container">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <h4>TRAVEL FROM<br>CHAMBERY</h4>
+                                    <ul class="nav nav-pills">
+                                        <li><a href="#">Chambery Airport Transfers</a></li>
+                                        <li><a href="#">Private MiniBus From Chambery</a></li>
+                                        <li><a href="#">Chambery Airport Info</a></li>
+                                        <li><a href="#">Top Destinations</a></li>
+                                    </ul>
+                                </div><!-- /.col -->
+                                <div class="col-xs-3">
+                                    <h4>TRAVEL FROM<br>GENEVA</h4>
+                                    <ul class="nav nav-pills">
+                                        <li><a href="#">Geneva Airport Transfers</a></li>
+                                        <li><a href="#">Private MiniBus From Geneva</a></li>
+                                        <li><a href="#">Geneva Airport Info</a></li>
+                                        <li><a href="#">Top Destinations</a></li>
+                                    </ul>
+                                </div><!-- /.col -->
+                                <div class="col-xs-3">
+                                    <h4>TRAVEL FROM<br>GRENOBLE</h4>
+                                    <ul class="nav nav-pills">
+                                        <li><a href="#">Grenoble Airport Transfers</a></li>
+                                        <li><a href="#">Private MiniBus From Grenoble</a></li>
+                                        <li><a href="#">Grenoble Airport Info</a></li>
+                                        <li><a href="#">Top Destinations</a></li>
+                                    </ul>
+                                </div><!-- /.col -->
+                                <div class="col-xs-3">
+                                    <h4>TRAVEL FROM<br>LYON</h4>
+                                    <ul class="nav nav-pills">
+                                        <li><a href="#">Lyon Airport Transfers</a></li>
+                                        <li><a href="#">Private MiniBus From Lyon</a></li>
+                                        <li><a href="#">Lyon Airport Info</a></li>
+                                        <li><a href="#">Top Destinations</a></li>
+                                    </ul>
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                        </div><!-- /.container-fluid -->
+                        <div class="gray-container">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <h4>TRAVEL FROM<br>MUNICH</h4>
+                                    <ul class="nav nav-pills">
+                                        <li><a href="#">Munich Airport Transfers</a></li>
+                                        <li><a href="#">Private MiniBus From Munich</a></li>
+                                        <li><a href="#">Munich Airport Info</a></li>
+                                        <li><a href="#">Top Destinations</a></li>
+                                    </ul>
+                                </div><!-- /.col -->
+                                <div class="col-xs-3">
+                                    <h4>TRAVEL FROM<br>ZURICH</h4>
+                                    <ul class="nav nav-pills">
+                                        <li><a href="#">Zurich Airport Transfers</a></li>
+                                        <li><a href="#">Private MiniBus From Zurich</a></li>
+                                        <li><a href="#">Zurich Airport Info</a></li>
+                                        <li><a href="#">Top Destinations</a></li>
+                                    </ul>
+                                </div><!-- /.col -->
+                                <div class="col-xs-3">
+                                    <h4>TRAVEL FROM<br>INNSBRUCK</h4>
+                                    <ul class="nav nav-pills">
+                                        <li><a href="#">Innsbruck Airport Transfers</a></li>
+                                        <li><a href="#">Private MiniBus From Innsbruck</a></li>
+                                        <li><a href="#">Innsbruck Airport Info</a></li>
+                                        <li><a href="#">Top Destinations</a></li>
+                                    </ul>
+                                </div><!-- /.col -->
+                                <div class="col-xs-3">
+                                    <h4>TRAVEL FROM<br>SALZBURG</h4>
+                                    <ul class="nav nav-pills">
+                                        <li><a href="#">Salzburg Airport Transfers</a></li>
+                                        <li><a href="#">Private MiniBus From Salzburg</a></li>
+                                        <li><a href="#">Salzburg Airport Info</a></li>
+                                        <li><a href="#">Top Destinations</a></li>
+                                    </ul>
+                                </div><!-- /.col -->
+                            </div><!-- /.row -->
+                        </div><!-- /.container-fluid -->
+                        <div class="col-xs-12 footer-dark-gray-col">
+                            <div class="container-fluid">
+                                <div class="footer-container">
+                                    <ul class="nav nav-pills nav-justified">
+                                        <li><a href="#"><span>Terms &amp; Conditions</span></a></li>
+                                        <li><a href="#"><span>Privacy</span></a></li>
+                                        <li><a href="#"><span>FAQ</span></a></li>
+                                        <li><a href="#"><span>How we work</span></a></li>
+                                        <li><a href="#"><span>Testimonial</span></a></li>
+                                        <li><a href="#"><span>Sitemap</span></a></li>
+                                        <li><a href="#"><span>Why Us</span></a></li>
+                                        <li><a href="#"><span>Log-in</span></a></li>
+                                        <li><a href="#"><span>Blog</span></a></li>
+                                    </ul>
+                                </div><!-- /.footer-container -->
+                            </div><!-- /.container-fluid -->
+                        </div><!-- /.col -->
+                    </nav>
+                </div><!-- /.container -->
+            </div><!-- /.col -->
+        </div><!-- /.container-fluid -->
 
-                                    <div class="col-xs-2 col-xs-offset-1">
-                                        <h4>TRAVEL FROM TURINO</h4>
-                                        <ul class="nav nav-pills">
-                                            <li><a href="#">Turin Airport Transfers</a></li>
-                                            <li><a href="#">Shared Transfers Turin</a></li>
-                                            <li><a href="#">Private MiniBus From Turin</a></li>
-                                            <li><a href="#">Shuttle Bus from Turin</a></li>
-                                            <li><a href="#">Turin Airport Info</a></li>
-                                        </ul>
-                                    </div><!-- /.col -->
-                                    <div class="col-xs-2">
-                                        <h4>TRAVEL FROM TURINO</h4>
-                                        <ul class="nav nav-pills">
-                                            <li><a href="#">Turin Airport Transfers</a></li>
-                                            <li><a href="#">Shared Transfers Turin</a></li>
-                                            <li><a href="#">Private MiniBus From Turin</a></li>
-                                            <li><a href="#">Shuttle Bus from Turin</a></li>
-                                            <li><a href="#">Turin Airport Info</a></li>
-                                        </ul>
-                                    </div><!-- /.col -->
-                                    <div class="col-xs-2">
-                                        <h4>TRAVEL FROM TURINO</h4>
-                                        <ul class="nav nav-pills">
-                                            <li><a href="#">Turin Airport Transfers</a></li>
-                                            <li><a href="#">Shared Transfers Turin</a></li>
-                                            <li><a href="#">Private MiniBus From Turin</a></li>
-                                            <li><a href="#">Shuttle Bus from Turin</a></li>
-                                            <li><a href="#">Turin Airport Info</a></li>
-                                        </ul>
-                                    </div><!-- /.col -->
-                                    <div class="col-xs-2">
-                                        <h4>TRAVEL FROM TURINO</h4>
-                                        <ul class="nav nav-pills">
-                                            <li><a href="#">Turin Airport Transfers</a></li>
-                                            <li><a href="#">Shared Transfers Turin</a></li>
-                                            <li><a href="#">Private MiniBus From Turin</a></li>
-                                            <li><a href="#">Shuttle Bus from Turin</a></li>
-                                            <li><a href="#">Turin Airport Info</a></li>
-                                        </ul>
-                                    </div><!-- /.col -->
-                                    <div class="col-xs-2">
-                                        <h4>TRAVEL FROM TURINO</h4>
-                                        <ul class="nav nav-pills">
-                                            <li><a href="#">Turin Airport Transfers</a></li>
-                                            <li><a href="#">Shared Transfers Turin</a></li>
-                                            <li><a href="#">Private MiniBus From Turin</a></li>
-                                            <li><a href="#">Shuttle Bus from Turin</a></li>
-                                            <li><a href="#">Turin Airport Info</a></li>
-                                        </ul>
-                                    </div><!-- /.col -->
-                                </div><!-- /.row -->
-                            </div><!-- /.col -->
-                        </div><!-- /.navbar-container -->
-                    </div><!-- /.container-fluid -->
-                    <div class="container-fluid dark-gray-container">
-                        <div class="navbar-container">
-                        <div class="footer-container">
-                            <div class="col-xs-12">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><span>Terms &amp; Conditions</span></a></li>
-                                    <li><a href="#"><span>Privacy</span></a></li>
-                                    <li><a href="#"><span>FAQ</span></a></li>
-                                    <li><a href="#"><span>How we work</span></a></li>
-                                    <li><a href="#"><span>Testimonial</span></a></li>
-                                    <li><a href="#"><span>Sitemap</span></a></li>
-                                    <li><a href="#"><span>Why Us</span></a></li>
-                                    <li><a href="#"><span>Log-in</span></a></li>
-                                    <li><a href="#"><span>Blog</span></a></li>
-                                </ul>
-                            </div>
-                            </div><!-- /.footer-container -->
-                        </div><!-- /.navbar-container -->
-                    </div><!-- /.container-fluid -->
-                </nav>
-            </div><!-- /.footer -->
-        </div>
+        
 
 
 
